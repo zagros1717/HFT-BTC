@@ -22,6 +22,5 @@ COPY . .
 
 # Keep the container non-trading/research-only by default.
 # The code also enforces execution_enabled: false in config/config.yaml.
-VOLUME ["/app/data"]
 
 CMD ["python", "main.py", "--help"]
