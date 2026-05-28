@@ -22,5 +22,6 @@ COPY . .
 
 # Keep the container non-trading/research-only by default.
 # The code also enforces execution_enabled: false in config/config.yaml.
-
-CMD ["python", "main.py", "--help"]
+# Railway web services must stay alive and listen on the injected $PORT.
+EXPOSE 8000
+CMD ["python", "railway_app.py"]
